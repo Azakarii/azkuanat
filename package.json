@@ -1,0 +1,21 @@
+{
+  "name": "anatomy-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive 3D anatomy atlases",
+  "scripts": {
+    "prepare:www": "node scripts/prepare-www.js",
+    "sync": "npm run prepare:www && npx cap sync",
+    "android": "npx cap open android",
+    "ios": "npx cap open ios",
+    "build:android": "npx cap sync android && cd android && gradlew.bat assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/ios": "^7.4.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3"
+  }
+}
